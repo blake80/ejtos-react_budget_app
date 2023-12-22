@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
-import totalExpenses from './ExpenseTotal';
+//import ExpenseTotal from './ExpenseTotal';
 
 const Budget = () => {
     const { budget } = useContext(AppContext);
@@ -8,12 +8,15 @@ const Budget = () => {
     const handleBudgetChange = (event) => {
         setNewBudget(event.target.value);
     }
-if (newBudget >= 20000) {
-    alert("Budget cannot exceed $20,000!")
+    if (newBudget < 960 ) {
+        alert("Budget should be more than what has already been allocated!")
     }
-if (newBudget <= totalExpenses ) {
-    alert("Budget should be more than what has already been allocated!")
+    if (newBudget > 20000) {
+        alert("Budget cannot exceed $20,000!")
     }
+
+
+    
     
     return (
 <div className='alert alert-secondary'>
@@ -22,4 +25,6 @@ if (newBudget <= totalExpenses ) {
 </div>
     );
 };
+
+
 export default Budget;

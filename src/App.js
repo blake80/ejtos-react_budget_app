@@ -23,16 +23,6 @@ const App = () => {
                     <div className='col-sm'>
                         <ExpenseTotal />
                     </div>
-                    <div className='alert alert-secondary'>
-                        <label style={{marginLeft: '1rem', backgroundColor:'#33FF49', color:'white'}}>Currency
-                        <select name='hover_color' id="currency" onChange={(event)=>changeCurrency(event.target.value)}>
-                        <option style={{color:'black'}} value="£">£ Pound</option>
-                        <option style={{color:'black'}} value="$">$ Dollar</option>
-                        <option style={{color:'black'}} value="€">€ Euro</option>
-                        <option style={{color:'black'}} value="₹">₹ Rupee</option>
-                        </select>
-                        </label>
-                    </div>
                 </div>
                 <h3 className='mt-3'>Allocation</h3>
                 <div className='row '>
